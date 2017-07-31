@@ -1,9 +1,17 @@
 <!DOCTYPE>
-<html>
+<html ng-app="NameCalculatorModule">
     <head>
         <title>My First Angular App</title>
+        <script src="angular.min.js"></script>
+        <script src="index.js"></script>
     </head>
     <body>
-        <h1>Welcome</h1>
+        <h1>NAME CALCULATOR</h1>
+        <div ng-controller="NameCalculatorController">
+            Please enter your name here:
+            <input type="text" ng-change="codeFunc()" ng-model="name"><br> 
+            {{name}} <br>
+            {{value}}
+        </div>
     </body>
 </html>
