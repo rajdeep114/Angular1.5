@@ -1,0 +1,18 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>My Lunch App</title>
+        <script src="angular.min.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body ng-app="LunchApp">
+         <h1>Welcome to the Lunch App</h1>
+        <div ng-controller="LunchController">
+            <textarea rows="5" cols="10" ng-model="data"></textarea>
+            <br>
+            <button ng-click="clickMe()">Check If Too Much!</button>
+            {{message}}
+        </div> 
+
+    </body>
+</html>

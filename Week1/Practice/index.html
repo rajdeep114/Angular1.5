@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!-- <!DOCTYPE>
 <html ng-app="NameCalculatorModule">
     <head>
         <title>My First Angular App</title>
@@ -12,6 +12,22 @@
             <input type="text" ng-change="codeFunc()" ng-model="name"><br> 
             {{name}} <br>
             {{value}}
+        </div>
+    </body>
+</html> -->
+
+<!DOCTYPE>
+<html ng-app="DependencyInjection">
+    <head>
+        <title>My First Angular App</title>
+        <script src="angular.min.js"></script>
+        <script src="dependencyInjection.js"></script>
+    </head>
+    <body>
+        <div ng-controller="DIcontroller">
+            <input type="text" ng-model="name" ng-blur="upper()"><br>
+            {{name}} <br>
+            {{myFunc()}}
         </div>
     </body>
 </html>
