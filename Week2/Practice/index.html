@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Filter and Service</title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="MyApp">
+         <h1>Filter and Service</h1>
+        <div ng-controller="MyController">
+            <!-- <p>{{message()}}, the ... cost is {{cost | currency: 'rs ': 4}}</p> <br>
+            <input type="text" ng-model="data"></input> <br>
+            <button ng-click="remove()">Remove Space</button> <br>
+            {{result}} <br>
+            {{ test | removeSpaces: "happy"}} <br> -->
+            <button ng-click="incrementCounter()">Increment</button>
+            <button ng-click="notIncrement()">Not Increment</button> <br>
+            {{cost}} {{notCounter}}
+        </div> 
+
+    </body>
+</html>
