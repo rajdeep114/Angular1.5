@@ -6,17 +6,39 @@
         <script src="app.js"></script>
     </head>
     <body ng-app="MyApp">
-         <h1>Filter and Service</h1>
-        <div ng-controller="MyController">
-            <!-- <p>{{message()}}, the ... cost is {{cost | currency: 'rs ': 4}}</p> <br>
+        <h1>Filter and Service</h1>
+        <div ng-controller="Controller1 as itemAdder">
+            <input type="text" ng-model="itemAdder.name" placeholder="Item Name">
+            <input type="text" ng-model="itemAdder.quantity" placeholder="Item Quantity">
+            <button ng-click="itemAdder.addItem();">Add Item!</button> <br>
+        </div> 
+
+        <div ng-controller="Controller2 as shoppingList">
+            <ul>
+                <li ng-repeat="item in shoppingList.list" ng-click="shoppingList.removeItem($index);">
+                    We have {{item.quantity}} of {{item.name}}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+ <!-- <p>{{message()}}, the ... cost is {{cost | currency: 'rs ': 4}}</p> <br>
             <input type="text" ng-model="data"></input> <br>
             <button ng-click="remove()">Remove Space</button> <br>
             {{result}} <br>
             {{ test | removeSpaces: "happy"}} <br> -->
-            <button ng-click="incrementCounter()">Increment</button>
+            <!-- <button ng-click="incrementCounter()">Increment</button>
             <button ng-click="notIncrement()">Not Increment</button> <br>
-            {{cost}} {{notCounter}}
-        </div> 
+            {{cost}} {{notCounter}} -->
+            <!-- <input type="text" ng-model="stringValue"> -->
+            <!-- <ul> -->
+                <!-- 
+                $index is visible inside the body of the tag that has ng-repeat directive 
+                filter loops through the entire array and return a new array matching search string
+                 -->
+                <!-- <li ng-repeat="item in list | filter :stringValue" >{{$index}} {{item}}</li>
 
-    </body>
-</html>
+            </ul>
+            <input type="text" ng-model="newItem">
+            <button ng-click="addItem()">Add</button> -->
