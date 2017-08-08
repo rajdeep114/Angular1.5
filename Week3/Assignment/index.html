@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>My Lunch App</title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="MyApp">
+         <h1>Welcome To Rest</h1>
+        <div ng-controller="UserController as input">
+            <!-- <user-input></user-input> -->
+            <!-- <div ng-controller="UserOutputController as output"> -->
+            <input type="text" placeholder="Enter Item Name Here!" ng-model="input.text">
+            <button ng-click="input.narrowSearch();">Narrow Down Search!</button>
+            <ul>
+                <li ng-repeat="item in input.items">
+                    {{item.name}}, {{item.short_name}}, {{item.special_instructions}}
+                </li>
+                <!-- <user-output ng-repeat="item in output.items"></user-output> -->
+            </ul>
+            <!-- </div> -->
+        </div> 
+
+    </body>
+</html>
